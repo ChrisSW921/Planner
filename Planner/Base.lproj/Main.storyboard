@@ -65,7 +65,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="JtH-Bk-3Zx">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="7ci-fL-fzE"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="7ci-fL-fzE">
+                            <connections>
+                                <action selector="addPressed:" destination="ctc-bn-ROX" id="SlX-72-GyU"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZ2-mJ-mKA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
