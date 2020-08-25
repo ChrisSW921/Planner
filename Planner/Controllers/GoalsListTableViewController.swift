@@ -68,8 +68,9 @@ class GoalsListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Goal")!
+        let cell = UITableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: "Goal")
         cell.textLabel?.text = goals?[indexPath.row].title ?? "No goals yet!"
+        cell.detailTextLabel?.text = "Streak: \(goals![indexPath.row].duration) days"
         return cell
     }
 
