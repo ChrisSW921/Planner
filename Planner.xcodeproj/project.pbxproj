@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		085DFC8B23428AD476208620 /* Pods_Planner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB8A97CFE721F631D82D5D1 /* Pods_Planner.framework */; };
 		AE59184833AE2A6337A6AD89 /* Pods_PlannerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F99E225CFD3318BCBC60F3 /* Pods_PlannerTests.framework */; };
 		CE820C82F00E59EC2C005E9F /* Pods_Planner_PlannerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FA9F352EB1EAC5E7E728D29 /* Pods_Planner_PlannerUITests.framework */; };
+		FFBF447024F6AB4A00CBA238 /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBF446F24F6AB4A00CBA238 /* SwipeTableViewController.swift */; };
 		FFCB0B9D24F406310058F5F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB0B9C24F406310058F5F5 /* AppDelegate.swift */; };
 		FFCB0B9F24F406310058F5F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB0B9E24F406310058F5F5 /* SceneDelegate.swift */; };
 		FFCB0BA424F406310058F5F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFCB0BA224F406310058F5F5 /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		A32D98915F6B52683802CC52 /* Pods-PlannerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlannerTests.debug.xcconfig"; path = "Target Support Files/Pods-PlannerTests/Pods-PlannerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A5E22C608C853C0DC0421C3F /* Pods-Planner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Planner.release.xcconfig"; path = "Target Support Files/Pods-Planner/Pods-Planner.release.xcconfig"; sourceTree = "<group>"; };
 		CFFC3E9DE9E48BD2D83B7250 /* Pods-Planner-PlannerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Planner-PlannerUITests.debug.xcconfig"; path = "Target Support Files/Pods-Planner-PlannerUITests/Pods-Planner-PlannerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FFBF446F24F6AB4A00CBA238 /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		FFCB0B9924F406310058F5F5 /* Planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Planner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFCB0B9C24F406310058F5F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFCB0B9E24F406310058F5F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,7 +107,6 @@
 				A32D98915F6B52683802CC52 /* Pods-PlannerTests.debug.xcconfig */,
 				5A63A802BCC38DD2B6319B0B /* Pods-PlannerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -179,6 +180,7 @@
 			children = (
 				FFCB0BCC24F40A980058F5F5 /* GoalsViewController.swift */,
 				FFCB0BCE24F40C170058F5F5 /* GoalsListTableViewController.swift */,
+				FFBF446F24F6AB4A00CBA238 /* SwipeTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -426,6 +428,7 @@
 				FFCB0B9F24F406310058F5F5 /* SceneDelegate.swift in Sources */,
 				FFCB0BCF24F40C170058F5F5 /* GoalsListTableViewController.swift in Sources */,
 				FFCB0BD224F40C4B0058F5F5 /* Goal.swift in Sources */,
+				FFBF447024F6AB4A00CBA238 /* SwipeTableViewController.swift in Sources */,
 				FFCB0BCD24F40A980058F5F5 /* GoalsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

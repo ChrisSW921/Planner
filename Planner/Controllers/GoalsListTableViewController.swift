@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class GoalsListTableViewController: UITableViewController {
+class GoalsListTableViewController: SwipeTableViewController {
     
     let realm = try! Realm()
     
@@ -59,6 +59,18 @@ class GoalsListTableViewController: UITableViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    override func updateModel(at indexPath: IndexPath) {
+        if let goalForDeletion = self.goals?[indexPath.row] {
+            do {
+                try self.realm.write {
+                    self.realm.delete(goalForDeletion)
+                }
+            } catch {
+                print("Error deleting category, \(error)")
+            }
+        }
+    }
+    
 
     // MARK: - Table view data source
 
@@ -68,7 +80,7 @@ class GoalsListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: "Goal")
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
         cell.textLabel?.text = goals?[indexPath.row].title ?? "No goals yet!"
         cell.detailTextLabel?.text = "Streak: \(goals![indexPath.row].duration) days"
         return cell
