@@ -81,8 +81,9 @@ class GoalsListTableViewController: SwipeTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
-        cell.textLabel?.text = goals?[indexPath.row].title ?? "No goals yet!"
-        cell.detailTextLabel?.text = "Streak: \(goals![indexPath.row].duration) days"
+        cell.textLabel?.numberOfLines = 0
+        cell.textLabel?.text = "\(goals![indexPath.row].title) --Active for \(goals![indexPath.row].duration) days"
+        //cell.detailTextLabel?.text = "Streak: \(goals![indexPath.row].duration) days"
         return cell
     }
 
